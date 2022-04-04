@@ -4,7 +4,7 @@ using namespace std;
 
 int maximum69Number (int num) {
         string number = to_string(num);
-        for(int i = 0; i < number.length(); i++){
+        for(unsigned long i = 0; i < number.length(); i++){
             if(number[i] == '6'){
                 number[i] = '9';
                 break;
@@ -12,3 +12,8 @@ int maximum69Number (int num) {
         }
         return stoi(number);
     }
+
+int main(){
+    cout<<maximum69Number(9669)<<endl;
+    return 0;
+}
